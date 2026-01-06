@@ -1,0 +1,126 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* Space for icon */
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #2a2a2a;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+/* The bar container */
+.strength-bar {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* The fill inside the bar */
+#strength-bar-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #ff4d4d; /* Default red */
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#strength-text {
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* --- Info Icon & Tooltip Styles --- */
+
+.info-icon {
+    font-size: 1rem;
+    color: #64ffda; /* Your accent color */
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative; /* Helps positioning */
+}
+
+/* The Tooltip Box */
+.tooltip-content {
+    background-color: #2a2a2a;
+    border: 1px solid #64ffda;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: -10px; /* Pull it closer to title */
+    text-align: left;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tooltip-content h4 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.tooltip-content ul {
+    list-style: none;
+}
+
+.tooltip-content ul li {
+    color: #bbb;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}

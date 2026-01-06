@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- UPDATED: More Reliable Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Added the info-icon class here -->
+        <h2>Password Strength Checker <i class="fas fa-info-circle info-icon"></i></h2>
+        
+        <!-- Tooltip Box (Hidden by default) -->
+        <div class="tooltip-content">
+            <h4>How is strength calculated?</h4>
+            <ul>
+                <li>✅ Longer than 8 characters</li>
+                <li>✅ Contains at least one lowercase letter (a-z)</li>
+                <li>✅ Contains at least one uppercase letter (A-Z)</li>
+                <li>✅ Contains at least one number (0-9)</li>
+                <li>✅ Contains at least one special symbol (!@#$...)</li>
+            </ul>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Type your password" id="passwordInput">
+            <i class="far fa-eye" id="toggleIcon"></i>
+        </div>
+
+        <div class="strength-bar">
+            <div id="strength-bar-fill"></div>
+        </div>
+        <p id="strength-text">Strength: Empty</p>
+    </div>
+
+    <!-- No need for script tag here anymore, using the new Link above -->
+    <script src="script.js"></script>
+</body>
+</html>
